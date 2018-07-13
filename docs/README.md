@@ -79,7 +79,7 @@ Paul Sänger | Anwesend | -
 <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Structure.jpg?raw=true" width="80%">
 
 ## Sonstiges
-Der gesamte Code ist auch in diesem Repository zu finden.
+Der gesamte Code ist auch in [diesem Repository](https://github.com/MelzerFinn/InfoProjektAbgabe) zu finden.
 
 ## License
 
