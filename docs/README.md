@@ -64,19 +64,19 @@ Paul Sänger | Anwesend | -
 
 ## Bilder
 #### VR-Ansicht
-<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Google_Cardboard.jpg" width="40%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Google_Cardboard.jpg?raw=true" width="40%">
 
 #### Roboter
 
-<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_1.jpg" width="45%"> <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_2.jpg" width="45%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_1.jpg?raw=true" width="45%"> <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_2.jpg?raw=true" width="45%">
 
 #### Funktionsweise Interface
 
-<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Interface.png" width="100%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Interface.png?raw=true" width="100%">
 
 #### Programmstruktur
 
-<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Structure.jpg" width="80%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Structure.jpg?raw=true" width="80%">
 
 ## Sonstiges
 Der gesamte Code ist auch in diesem Repository zu finden.
