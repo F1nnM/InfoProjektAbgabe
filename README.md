@@ -62,18 +62,18 @@ Paul Sänger | Anwesend | -
 * [Interface](http://www.finnsweb.de/info2/)
 
 ## Bilder
-* VR-Ansicht
+#### VR-Ansicht
 <img src="Bilder/Google_Cardboard.jpg" width="40%">
 
-* Roboter
+#### Roboter
 
 <img src="Bilder/Robot_1.jpg" width="45%"> <img src="Bilder/Robot_2.jpg" width="45%">
 
-* Funktionsweise Interface
+#### Funktionsweise Interface
 
 <img src="Bilder/Interface.png" width="100%">
 
-* Programmstruktur
+#### Programmstruktur
 
 <img src="Bilder/Structure.jpg" width="80%">
 
