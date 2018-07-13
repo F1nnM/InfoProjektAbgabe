@@ -8,6 +8,9 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 ## Programmiersprachen
 * Java
 * HTML
+* JavaScript
+* CSS
+* PHP
 * Shell
 * *(Später)* C++
 
