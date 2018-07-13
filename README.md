@@ -51,8 +51,8 @@ Paul Sänger | Bau des Roboters
 |:--------|:-------------:|:--------:|
 Finn Melzer | 250 Stunden | 3865
 Markus Jaeger | 320 Stunden | 2130
-Florian Sax | 65 Birnen | x
-Paul Sänger | Anwesend | x
+Florian Sax | 65 Birnen | -
+Paul Sänger | Anwesend | -
 
 ## Beispiele
 * [Karte](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/map.json)
