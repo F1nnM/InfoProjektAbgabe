@@ -52,8 +52,8 @@ Paul Sänger | Bau des Roboters
 
 | Person | Arbeitszeit (ca.) | Zeilen |
 |:--------|:-------------:|:--------:|
-Finn Melzer | 250 Stunden | 3865
-Markus Jaeger | 320 Stunden | 2130
+Finn Melzer | 260 Stunden | ~3800
+Markus Jaeger | 320 Stunden | ~2100
 Florian Sax | 65 Stunden | -
 Paul Sänger | Anwesend | -
 
