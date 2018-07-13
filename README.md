@@ -62,6 +62,13 @@ Paul Sänger | Anwesend | -
 * [Karte](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/map.json)
 * [Interface](http://www.finnsweb.de/info2/)
 
+## Sonstiges
+Der gesamte Code ist auch in diesem Repository zu finden.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+
+
+*```Readme written by MarkusJx```*
