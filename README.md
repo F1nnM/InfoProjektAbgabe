@@ -6,7 +6,10 @@ Bau eines Roboters, welcher selbstständig einen unbekannten Raum abfahren und k
 Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstellen. Dieses kann dann ich einer seperaten 3D-Ansicht betrachtet werden.
 
 ## Programmiersprachen
-* Nö
+* Java
+* HTML
+* Shell
+* *(Später)* C++
 
 ## Externe Bibliotheken
 #### Kommunikation
