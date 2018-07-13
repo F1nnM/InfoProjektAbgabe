@@ -41,7 +41,8 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * Paul Sänger
 
 ## Aufgabenverteilung
-|Person|Aufgabe(n)|
+
+| Person | Aufgabe(n) |
 |:------|:--------|
 Finn Melzer | Interface, SQL-Kommunikation, Steuerung
 Markus Jaeger | Kommunikation, RaspberryPi-Setup
@@ -52,10 +53,10 @@ Paul Sänger | Bau des Roboters
 
 | Person | Arbeitszeit (ca.) | Zeilen |
 |:--------|:-------------:|:--------:|
-Finn Melzer | 260 Stunden | ~3800
-Markus Jaeger | 320 Stunden | ~2100
+Finn Melzer | 250 Stunden | 3865
+Markus Jaeger | 320 Stunden | 2130
 Florian Sax | 65 Stunden | -
-Paul Sänger | 20 Stunden | -
+Paul Sänger | Anwesend | -
 
 ## Beispiele
 * [Karte](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/map.json)
@@ -63,22 +64,22 @@ Paul Sänger | 20 Stunden | -
 
 ## Bilder
 #### VR-Ansicht
-<img src="Bilder/Google_Cardboard.jpg" width="40%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Google_Cardboard.jpg?raw=true" width="40%">
 
 #### Roboter
 
-<img src="Bilder/Robot_1.jpg" width="45%"> <img src="Bilder/Robot_2.jpg" width="45%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_1.jpg?raw=true" width="45%"> <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_2.jpg?raw=true" width="45%">
 
 #### Funktionsweise Interface
 
-<img src="Bilder/Interface.png" width="100%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Interface.png?raw=true" width="100%">
 
 #### Programmstruktur
 
-<img src="Bilder/Structure.jpg" width="80%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Structure.jpg?raw=true" width="80%">
 
 ## Sonstiges
-Der gesamte Code ist auch in diesem Repository zu finden.
+Der gesamte Code ist auch in [diesem Repository](https://github.com/MelzerFinn/InfoProjektAbgabe) zu finden.
 
 ## License
 
