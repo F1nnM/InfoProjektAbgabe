@@ -55,7 +55,7 @@ Paul Sänger | Bau des Roboters
 Finn Melzer | 260 Stunden | ~3800
 Markus Jaeger | 320 Stunden | ~2100
 Florian Sax | 65 Stunden | -
-Paul Sänger | Anwesend | -
+Paul Sänger | 20 Stunden | -
 
 ## Beispiele
 * [Karte](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/map.json)
