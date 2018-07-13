@@ -3,7 +3,10 @@
 Bau eines Roboters, welcher selbstständig einen unbekannten Raum abfahren und karthogarfieren kann. Dieser soll ein Interface besitzen, um den aktuellen Stand der Karte, welche erzeugt wird, in einer 2D bzw. einer 3D Ansicht anzeigen zu können.
 
 #### Optionales Ziel
+Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstellen. Dieses kann dann ich einer seperaten 3D-Ansicht betrachtet werden.
 
+## Programmiersprachen
+* Nö
 
 ## Externe Bibliotheken
 #### Kommunikation
@@ -29,8 +32,12 @@ Bau eines Roboters, welcher selbstständig einen unbekannten Raum abfahren und k
 * Paul Sänger
 
 ## Aufgabenverteilung
-
-
+|Person|Aufgabe(n)|
+|:------|:--------|
+Finn Melzer | Interface, SQL-Kommunikation, Steuerung
+Markus Jaeger | Kommunikation, RaspberryPi-Setup
+Florian Sax | Bau des Roboters
+Paul Sänger | Bau des Roboters
 
 ## Arbeitsaufwand
 
@@ -40,3 +47,7 @@ Finn Melzer | 250 Stunden | 3865
 Markus Jaeger | 320 Stunden | 2130
 Florian Sax | 65 Birnen | x
 Paul Sänger | Anwesend | x
+
+## Beispiele
+* [Karte](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/map.json)
+* [Interface](http://www.finnsweb.de/info2/)
