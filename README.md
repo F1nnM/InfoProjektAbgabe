@@ -15,8 +15,7 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * *(Später)* C++
 
 ## Code
-* [Steuerung](https://github.com/MelzerFinn/Info18)
-* [Webinterface](https://github.com/MelzerFinn/Info18Web)
+* [Steuerung + Webinterface](https://github.com/MelzerFinn/Info18)
 
 ### Eigene Bibliotheken
 * [NXTPiConnection](https://github.com/MarkusJx/NXTPIConnection)
