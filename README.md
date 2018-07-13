@@ -14,6 +14,10 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * Shell
 * *(Später)* C++
 
+## Code
+* [Steuerung](https://github.com/MelzerFinn/Info18)
+* [Webinterface](https://github.com/MelzerFinn/Info18Web)
+
 ## Externe Bibliotheken
 #### Kommunikation
 * [LeJos NXJ](http://www.lejos.org/index.php)
