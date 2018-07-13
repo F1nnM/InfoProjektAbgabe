@@ -63,19 +63,19 @@ Paul Sänger | Anwesend | -
 
 ## Bilder
 #### VR-Ansicht
-<img src="Bilder/Google_Cardboard.jpg" width="40%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Google_Cardboard.jpg" width="40%">
 
 #### Roboter
 
-<img src="Bilder/Robot_1.jpg" width="45%"> <img src="Bilder/Robot_2.jpg" width="45%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_1.jpg" width="45%"> <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_2.jpg" width="45%">
 
 #### Funktionsweise Interface
 
-<img src="Bilder/Interface.png" width="100%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Interface.png" width="100%">
 
 #### Programmstruktur
 
-<img src="Bilder/Structure.jpg" width="80%">
+<img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Structure.jpg" width="80%">
 
 ## Sonstiges
 Der gesamte Code ist auch in diesem Repository zu finden.
