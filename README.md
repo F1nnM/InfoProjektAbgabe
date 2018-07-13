@@ -18,6 +18,11 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * [Steuerung](https://github.com/MelzerFinn/Info18)
 * [Webinterface](https://github.com/MelzerFinn/Info18Web)
 
+### Eigene Bibliotheken
+* [NXTPiConnection](https://github.com/MarkusJx/NXTPIConnection)
+* [Utilities](https://github.com/MarkusJx/Utilities)
+* [JavaKinect](https://github.com/MarkusJx/JavaKinect)
+
 ## Externe Bibliotheken
 #### Kommunikation
 * [LeJos NXJ](http://www.lejos.org/index.php)
@@ -29,11 +34,6 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * [Processing Core](https://processing.org)
 * [OpenCv](https://opencv.org)
 * [Apache Commons Compress™](http://commons.apache.org/proper/commons-compress/)
-
-## Eigene Bibliotheken
-* [NXTPiConnection](https://github.com/MarkusJx/NXTPIConnection)
-* [Utilities](https://github.com/MarkusJx/Utilities)
-* [JavaKinect](https://github.com/MarkusJx/JavaKinect)
 
 ## Teilnehmer
 * Finn Melzer ([@MelzerFinn](https://github.com/MelzerFinn))
