@@ -41,6 +41,7 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * Paul Sänger
 
 ## Aufgabenverteilung
+
 | Person | Aufgabe(n) |
 |:------|:--------|
 Finn Melzer | Interface, SQL-Kommunikation, Steuerung
