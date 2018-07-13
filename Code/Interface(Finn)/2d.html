@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <script>
+        document.addEventListener("keyup", function (e) {
+            var key = e.keyCode ? e.keyCode : e.which;
+            window.parent.postMessage("" + key, "*");
+        }, true);
+
+        var map = [];
+        var highest_x = 0;
+        var highest_y = 0;
+        var lowest_x = 0;
+        var lowest_y = 0;
+
+        function move(pos) {
+            var ctx = document.querySelector("#pos").getContext("2d");
+            var ctx2 = document.querySelector("canvas").getContext("2d");
+            ctx.canvas.width = ctx2.canvas.width;
+            ctx.canvas.height = ctx2.canvas.height;
+            ctx.strokeStyle = "#ff0000";
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            ctx.strokeRect(pos.x-15+ Math.abs(lowest_x), ctx.canvas.height -(pos.y+15+ Math.abs(lowest_y)), 30, 30);
+            ctx.strokeRect(pos.x - 1 +Math.abs(lowest_x), ctx.canvas.height-(pos.y - 1+ Math.abs(lowest_y)), 2,2);
+        }
+
+        function addData(data) {
+            var canvas = document.querySelector("canvas");
+            drawImg(canvas, data);
+        }
+
+        function drawImg(canvas, new_positions) {
+            var ctx = canvas.getContext("2d");
+            map = [];
+            for (i = 0; i < new_positions.length; i++) {
+                lowest_x = Math.min(lowest_x, new_positions[i].x);
+                lowest_y = Math.min(lowest_y, new_positions[i].y);
+            }
+
+            for (i = 0; i < new_positions.length; i++) {
+                map.push({"x": new_positions[i].x + Math.abs(lowest_x), "y": new_positions[i].y + Math.abs(lowest_y)});
+            }
+
+            for (i = 0; i < map.length; i++) {
+                highest_x = Math.max(highest_x, map[i].x);
+                highest_y = Math.max(highest_y, map[i].y);
+            }
+
+
+
+            if (highest_x > ctx.canvas.width) {
+                ctx.canvas.width = highest_x;
+                ctx.canvas.height = highest_x * canvas.offsetHeight / canvas.offsetWidth;
+            }
+            if (highest_y > ctx.canvas.height) {
+                ctx.canvas.width = highest_y * canvas.offsetWidth / canvas.offsetHeight;
+                ctx.canvas.height = highest_y;
+            }
+
+            ctx.fillStyle = "#00cc66";
+            while (!ctx.fillStyle == "#00cc66") console.log(ctx.fillStyle);
+            map.forEach(pos => {
+                ctx.fillRect(pos.x, ctx.canvas.height-pos.y, 1, 1);
+            });
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            background-color: #080808;
+        }
+        #pos {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas></canvas>
+    <canvas id="pos"></canvas>
+</body>
+
+</html>

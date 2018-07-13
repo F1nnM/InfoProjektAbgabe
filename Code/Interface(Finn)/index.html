@@ -1,0 +1,297 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboScan</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        @font-face {
+            font-family: keys;
+            src: url(keys3.ttf);
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #19d5ff;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        span.k {
+            font-family: keys;
+            font-size: 40px;
+            margin-left: 15px;
+            display: inline-block;
+            vertical-align: sub;
+            cursor: pointer;
+        }
+
+        #useKeysContainer {
+            float: right;
+            ;
+            margin-right: 10px;
+        }
+
+        #frame-container {
+            position: relative;
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+
+        iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #080808;
+        }
+
+        @keyframes recording {
+            from {
+                opacity: 0.1;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #recording {
+            display: block;
+            position: fixed;
+            z-index: 1000;
+            width: 75px;
+            height: 75px;
+            background-color: transparent;
+            top: 60px;
+            right: 20px;
+            transition: 0.8s;
+            border-radius: 75px;
+        }
+
+        #recording.true {
+            background-color: red;
+            animation: recording 1s ease 0s infinite alternate;
+        }
+
+        #save_gen {
+            background-color: #080808;
+        }
+    </style>
+    <script defer>
+        var positions = [];
+        var roboPos = { "x": 0, "y": 0 }
+        var source;
+        var kinectPos = [];
+        var kinectSource;
+        var kinect = false;
+        window.addEventListener("resize", function () {
+            document.getElementById('frame').offsetWidth = window.innerWidth;
+            document.getElementById('frame').offsetHeight = window.innerHeight - 40;
+        });
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            function dd() { document.querySelector("#frame").src = "2d.html"; kinect = false; }
+            function ddd() { document.querySelector("#frame").src = "3d.html"; kinect = false; }
+            var recording = false;
+            document.addEventListener("keyup", function (e) {
+                if (!document.querySelector("#useKeys").checked) return false;
+                var key = e.keyCode ? e.keyCode : e.which;
+                handleKeys(key);
+            }, true);
+
+            elems = document.getElementsByClassName("k");
+            for (i = 0; i < elems.length; i++) {
+                elems[i].onclick = function () {
+                    if (this.innerHTML == "2") dd();
+                    else if (this.innerHTML == "3") ddd();
+                    else if (this.innerHTML == "r") setRecord(true);
+                    else if (this.innerHTML == "t") setRecord(false);
+                    else if (this.innerHTML == "D") clear();
+                    else if (this.innerHTML == "x") xport();
+                    else if (this.innerHTML == "i") save();
+                    else if (this.innerHTML == "o") load();
+                    else if (this.innerHTML == "m") startManual();
+                    else if (this.innerHTML == "k") startKinect();
+                };
+            }
+
+            window.addEventListener("message", function (e) {
+                key = e.data;
+                handleKeys(+key);
+            });
+
+            function clear() {
+                positions = [];
+                document.querySelector("#frame").contentWindow.location.reload();
+            }
+
+            setInterval(function () {
+                if (!kinect) document.querySelector("#frame").contentWindow.addData(positions);
+                if (kinect) document.querySelector("#frame").contentWindow.addData(kinectPos);
+                document.querySelector("#frame").contentWindow.move(roboPos);
+            }, 2000);
+            function setRecord(state) {
+                if (state) {
+                    source = new EventSource("./data.php");
+                    source.onmessage = function (event) {
+                        data = JSON.parse(event.data);
+                        for (i = 0; data["Sens" + i]; i++) {
+                            positions.push({ x: (data["Sens" + i].x) | 0, y: (data["Sens" + i].y) | 0 });
+                        }
+                        if (data["Pos"]) {
+                            roboPos = { x: (data["Pos"].x) | 0, y: (data["Pos"].y) | 0 };
+                        }
+                    }
+                    sourceKinect = new EventSource("./dataKinect.php");
+                    sourceKinect.onmessage = function (event) {
+                        data = JSON.parse(event.data);
+                        for (i = 0; i < data.length; i++) {
+                            kinectPos.push(data[i]);
+                        }
+                    }
+                } else {
+                    try {
+                        source.close();
+                        source = null;
+                    } catch (e){
+
+                    }
+                    try {
+                        sourceKinect.close();
+                        sourceKinect = null;
+                    } catch (e) {
+
+                    }
+                }
+                document.querySelector("#recording").className = state;
+            }
+            function save() {
+                setRecord(false);
+                canvas = document.querySelector("#save_gen");
+                ctx = canvas.getContext("2d");
+                highest_x = 0;
+                highest_y = 0;
+                lowest_x = 0;
+                lowest_y = 0;
+                map = [];
+                for (i = 0; i < positions.length; i++) {
+                    lowest_x = Math.min(lowest_x, positions[i].x);
+                    lowest_y = Math.min(lowest_y, positions[i].y);
+                }
+
+                for (i = 0; i < positions.length; i++) {
+                    map.push({ "x": positions[i].x + Math.abs(lowest_x), "y": positions[i].y + Math.abs(lowest_y) });
+                }
+
+                for (i = 0; i < map.length; i++) {
+                    highest_x = Math.max(highest_x, map[i].x);
+                    highest_y = Math.max(highest_y, map[i].y);
+                }
+                highest_x += 20;
+                highest_y += 20;
+                ctx.canvas.width = highest_x;
+                ctx.canvas.height = highest_y;
+                ctx.fillStyle = "#080808";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#00cc66";
+                map.forEach(pos => {
+                    ctx.fillRect(pos.x + 10, highest_y-(pos.y + 10), 1, 1);
+                });
+                canvas.toBlob(function (blob) {
+                    var downloadLink = document.createElement("a");
+                    downloadLink.download = "map.png";
+                    downloadLink.innerHTML = "Download File";
+                    downloadLink.href = window.URL.createObjectURL(blob);
+                    downloadLink.click();
+                });
+
+            }
+            function xport() {
+                setRecord(false);
+                var file = null;
+                var data = new Blob([JSON.stringify(positions)], { type: 'text/plain' });
+                if (file !== null) {
+                    window.URL.revokeObjectURL(file);
+                }
+                file = window.URL.createObjectURL(data);
+                var downloadLink = document.createElement("a");
+                downloadLink.download = "map.json";
+                downloadLink.innerHTML = "Download File";
+                downloadLink.href = file;
+                downloadLink.click();
+            }
+            function load() {
+                setRecord(false);
+                document.querySelector("#fileinput").click();
+            }
+            document.querySelector("#fileinput").oninput = function () {
+                var reader = new FileReader();
+                reader.readAsText(this.files[0], "UTF-8");
+                reader.onload = function (evt) {
+                    positions = JSON.parse(evt.target.result);
+                }
+            }
+
+            function startManual() {
+                window.open("./control.html", "_blank", { width: 500, height: 500, titlebar: false })
+            }
+            function startKinect() {
+                document.querySelector("#frame").src = "kinect.html";
+                kinect = true;
+            }
+            function handleKeys(key) {
+                if (!document.querySelector("#useKeys").checked) return;
+                if (key == 50) dd(); //2
+                else if (key == 51) ddd(); //3
+                else if (key == 82) setRecord(true); //r
+                else if (key == 84) setRecord(false); //t
+                else if (key == 46) clear();//del
+                else if (key == 88) xport();//x
+                else if (key == 73) save();//i
+                else if (key == 79) load();//o
+                else if (key == 77) startManual();//m
+                else if (key == 75) startKinect();//k
+            }
+        });
+    </script>
+</head>
+
+<body style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;">
+    <header>
+        <span class="k">2</span> 2D
+        <span class="k">3</span> 3D
+        <span class="k">r</span> Record
+        <span class="k">t</span> Stop
+        <span class="k">D</span> Clear
+        <span class="k">x</span> Export as .json
+        <span class="k">i</span> Save 2D image
+        <span class="k">o</span> Open .json file
+        <span class="k">m</span> Manual Control
+        <span class="k">k</span> Kinect
+
+        <div id="useKeysContainer">
+            <input id="useKeys" type="checkbox" checked>
+            <label for="useKeys">Use keys</label>
+        </div>
+    </header>
+    <div id="frame-container">
+        <iframe id="frame" src="2d.html" frameborder="0"></iframe>
+    </div>
+    </iframe>
+    <div id="recording"></div>
+    <canvas id="save_gen" style="display: none;"></canvas>
+    <input id="fileinput" type="file" style="display: none;">
+</body>
+
+</html>
