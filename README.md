@@ -29,8 +29,8 @@ Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstel
 * [JavaKinect](https://github.com/MarkusJx/JavaKinect)
 
 ## Teilnehmer
-* [Finn Melzer](https://github.com/MelzerFinn)
-* [Markus Jaeger](https://github.com/MarkusJx)
+* Finn Melzer ([@MelzerFinn](https://github.com/MelzerFinn))
+* Markus Jaeger ([@MarkusJx](https://github.com/MarkusJx))
 * Florian Sax
 * Paul Sänger
 
