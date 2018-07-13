@@ -3,7 +3,7 @@
 Bau eines Roboters, welcher selbstständig einen unbekannten Raum abfahren und karthogarfieren kann. Dieser soll ein Interface besitzen, um den aktuellen Stand der Karte, welche erzeugt wird, in einer 2D bzw. einer 3D Ansicht anzeigen zu können.
 
 #### Optionales Ziel
-Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstellen. Dieses kann dann ich einer seperaten 3D-Ansicht betrachtet werden.
+Nutzung einer Microsoft Kinect, um ein 3D-Modell des gescannten Raumes zu erstellen. Dieses kann dann in einer seperaten 3D-Ansicht betrachtet werden.
 
 ## Programmiersprachen
 * Java
