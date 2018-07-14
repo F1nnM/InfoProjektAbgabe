@@ -70,6 +70,8 @@ Paul Sänger | 25 Stunden | -
 
 <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_1.jpg?raw=true" width="45%"> <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Robot_2.jpg?raw=true" width="45%">
 
+[Weitere Bilder](http://www.finnsweb.de)
+
 #### Funktionsweise Interface
 
 <img src="https://github.com/MelzerFinn/InfoProjektAbgabe/blob/master/Bilder/Interface.png?raw=true" width="100%">
