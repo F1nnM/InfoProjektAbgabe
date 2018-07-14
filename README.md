@@ -69,6 +69,8 @@ Paul Sänger | 25 Stunden | -
 
 <img src="Bilder/Robot_1.jpg" width="45%"> <img src="Bilder/Robot_2.jpg" width="45%">
 
+[Weitere Bilder](http://www.finnsweb.de)
+
 #### Funktionsweise Interface
 
 <img src="Bilder/Interface.png" width="100%">
